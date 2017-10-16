@@ -16,6 +16,8 @@ public class formulaGeneral {
         double a = read.nextDouble();
         double b = read.nextDouble();
         double c = read.nextDouble();
+        
+        read.close();
 
         double x1 = ((-b) + Math.sqrt(Math.pow(b, 2) - (4 * a * c)) / (2 * a));
         double x2 = ((-b) - Math.sqrt(Math.pow(b, 2) - (4 * a * c)) / (2 * a));
