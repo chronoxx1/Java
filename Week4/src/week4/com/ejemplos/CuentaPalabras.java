@@ -23,4 +23,8 @@ public class CuentaPalabras {
         }
     }
     
+    public void SegundoMetodo(){
+        System.out.println("\n\n\nRespuesta del Segundo Metodo!!!");
+    }
+    
 }

@@ -23,6 +23,7 @@ public class Strings {
         int c = read.nextInt();
         CuentaPalabras cp = new CuentaPalabras(c);
         cp.CuentaLetras();
+        cp.SegundoMetodo();
                 
     }
 
