@@ -1,4 +1,4 @@
-package week4.com.ejemplos;
+package com.week4;
 
 import java.util.Scanner;
 
@@ -10,7 +10,7 @@ public class Strings {
 
     static Scanner read = new Scanner(System.in);
     static String cadena = "Parangarecutirimicuaro";
-    static String[] meses = {"Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dic",};
+    static String[] meses = {"Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dic",};
 
     public static void main(String[] args) {
         //cadenasArreglos();
@@ -18,13 +18,25 @@ public class Strings {
         //sw();
         //cifradoCesar(cadena, 3);
         //bucles();
+
+//        System.out.print("Longitud: ");
+//        int c = read.nextInt();
+//        CuentaPalabras cp = new CuentaPalabras(c);
+//        cp.CuentaLetras();
+//        cp.SegundoMetodo(3);
+
+//        try {
+//            System.out.println("aqui");
+//            System.out.println(meses[12]);
+//        } catch (IndexOutOfBoundsException x) {
+//            System.err.println(x);
+//        } finally {
+//            System.out.println("un final");
+//        }
         
-        System.out.print("Longitud: ");
-        int c = read.nextInt();
-        CuentaPalabras cp = new CuentaPalabras(c);
-        cp.CuentaLetras();
-        cp.SegundoMetodo();
-                
+        int arr[] = {3,5,7,9,4,2,1,6,8,10};
+        quickSort(arr, 3, 0);
+
     }
 
     public static void sw() {
@@ -84,9 +96,41 @@ public class Strings {
         read.close();
     }
 
+    public static void quickSort(int[] array1, int a, int b) {
+        int array2[] = new int[array1.length];
+        int aux;
+        int ini = a;
+        int fin = b;
+        int val = array1[(ini+fin)/2];
+        
+        do {
+            while (array1[ini] < val) {
+                ini++;
+            }
+            while (array1[fin] > val) {
+                fin--;
+            }
+            if (ini <= fin) {
+                aux = array1[ini];
+                array1[ini] = array1[fin];
+                array1[fin] = aux;
+                ini++;
+                fin--;
+            }
+        } while (ini <= fin);
+        if (a < fin) {
+            quickSort(array1, a, fin);
+        }
+        if (ini < b) {
+            quickSort(array1, ini, b);
+        }
+        array2 = array1;
+
+    }
+
     public static void bucles() {
         for (int i = 0; i < meses.length; i++) {
-            System.out.println((i+1) + " : " + meses[i]);
+            System.out.println((i + 1) + " : " + meses[i]);
         }
     }
 
@@ -109,7 +153,7 @@ public class Strings {
             }
         }
         return cifrado.toString();
-        
+
     }
 
 }

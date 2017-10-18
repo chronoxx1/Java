@@ -1,4 +1,4 @@
-package week4.com.ejemplos;
+package com.week4;
 
 /**
  *
@@ -23,8 +23,11 @@ public class CuentaPalabras {
         }
     }
     
-    public void SegundoMetodo(){
+    public void SegundoMetodo(int x){
         System.out.println("\n\n\nRespuesta del Segundo Metodo!!!");
+        for (int i = 0; i < x; i++) {
+            System.out.println(meses[i]);
+        }
     }
     
 }
