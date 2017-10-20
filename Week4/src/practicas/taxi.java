@@ -7,8 +7,8 @@ package practicas;
 public class taxi {
 
     public static void main(String[] args) {
-        double arr1[] = {0, 0.4};
-        double arr2[] = {1, 0.6};
+        double arr1[] = {0.4, 1};
+        double arr2[] = {0.9, 3};
         perfectCity(arr1, arr2);
     }
 
